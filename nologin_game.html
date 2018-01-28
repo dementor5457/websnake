@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A sárkányharcos</title>
+
+    <link rel="icon" type="image/ico" href="favicon.ico">
+
+    <link href="css/game.css" rel="stylesheet" media="screen, print">
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+</head>
+<body>
+<div id="content">
+    <div id="menu" class="window">
+        <h1><img src="img/logo.png" id="logo"> A sárkányharcos</h1>
+        <div id="subt">Webfejlesztés 2. - JavaScript beadandó</div>
+        <form id="menu-inputs" action="#">
+            <div id="err">&nbsp;</div>
+            <div>
+                <span class="menu-label"><label for="menu-m">Pálya szélessége:</label></span>
+                <input type="number" value="10" min="10" max="30" id="menu-m">
+            </div>
+            <div>
+                <span class="menu-label"><label for="menu-n">Pálya magassága:</label></span>
+                <input type="number" value="10" min="10" max="30" id="menu-n">
+            </div>
+            <div>
+                <span class="menu-label"><label for="menu-k">Tereptárgyak száma:</label></span>
+                <input type="number" value="2" min="0" max="10" id="menu-k">
+            </div>
+            <div id="menu-radiodiv">
+                <span class="menu-radiolabel">Kirajzolás:</span>
+                <label><input type="radio" name="mode" id="mode-2" checked> HTML5 canvas</label>
+                <label><input type="radio" name="mode" id="mode-1"> HTML+CSS</label>
+            </div>
+            <div id="browser-warn">&nbsp;</div>
+
+            <input type="submit" id="menu-button" class="btn" value="Játék indítása">
+            <input type="button" class="btn" value="Vissza" onclick="history.go(-1)">
+        </form>
+        <div class="menu-copy">
+            &copy; 2016 Dementor művek
+        </div>
+    </div>
+
+    <div id="mode1-window" class="window">
+        <div id="mode1-score-sign" class="score-sign">Pont: <span id="mode1-score-points"></span></div>
+        <div id="mode1-effect-sign" class="effect-sign">
+            <span class="effect-icon" id="mode1-effect-icon"></span>
+            <span class="effect-text" id="mode1-effect-text"></span>
+        </div>
+        <div id="mode1-canv"></div>
+        <div class="esc-btn btn" id="mode1-esc-btn">Esc: Kilépés</div>
+    </div>
+
+    <div id="mode2-window" class="window">
+        <div id="mode2-score-sign" class="score-sign">Pont: <span id="mode2-score-points"></span></div>
+        <div id="mode2-effect-sign" class="effect-sign">
+            <span class="effect-icon" id="mode2-effect-icon"></span>
+            <span class="effect-text" id="mode2-effect-text"></span>
+        </div>
+        <canvas id="mode2-canv" height="490" width="850"></canvas>
+        <div class="esc-btn btn" id="mode2-esc-btn">Esc: Kilépés</div>
+    </div>
+
+    <div id="endgame-cover"></div>
+    <div id="endgame-window" class="window">
+        <h2>Játék vége</h2>
+        <p>A pontjaid: <span id="endgame-points"></span></p>
+        <input type="button" class="btn" id="endgame-button" value="OK">
+    </div>
+</div>
+</body>
+</html>

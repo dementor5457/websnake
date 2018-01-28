@@ -1,0 +1,397 @@
+/* GLOBAL RULES */
+
+@font-face {
+    font-family: 'Krungthep';
+    src: url('../fonts/Krungthep.eot');
+    src: url('../fonts/Krungthep.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Krungthep.woff2') format('woff2'),
+    url('../fonts/Krungthep.woff') format('woff'),
+    url('../fonts/Krungthep.ttf') format('truetype'),
+    url('../fonts/Krungthep.svg#Krungthep') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #93BE5A;
+    font-family: 'Krungthep', monospace;
+    color: #1A1B0D;
+}
+
+.btn {
+    font-size: 20px;
+    text-align: center;
+    padding: 3px;
+    background-color: #1A1B0D;
+    color: #93BE5A;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    border: 2px solid #1A1B0D;
+}
+
+.btn:hover {
+    background-color: #242512;
+}
+
+.btn:active {
+    background-color: #93BE5A;
+    color: #1A1B0D;
+}
+
+.btn:disabled {
+    background-color: #93BE5A;
+    color: #1A1B0D;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+a {
+    text-decoration: none;
+}
+
+#logo {
+    width: 60px;
+    vertical-align: middle;
+}
+
+.btn-margin {
+    margin: 5px 0 5px 0;
+}
+
+/* MENU */
+
+input[type="radio"], input[type="submit"], label {
+    cursor: pointer;
+}
+
+.window {
+    background-color: #93BE5A;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+#main {
+    border: 2px solid #1A1B0D;
+    width: 800px;
+    height: 550px;
+}
+
+#main p {
+    margin: 0 15px 20px 15px;
+    text-align: justify;
+}
+
+#main-warn {
+    color: #CC181E;
+}
+
+#main-warn code {
+    font-size: 1.2em;
+}
+
+#menu {
+    border: 2px solid #1A1B0D;
+    width: 600px;
+    height: 400px;
+}
+
+#menu-php {
+    border: 2px solid #1A1B0D;
+    width: 600px;
+    height: 500px;
+}
+
+#menu, #menu *, #menu-php, #menu-php *, #main, #main *,
+#menu-reg, #menu-reg *, #menu-login, #menu-login *,
+#menu-nc, #menu-nc * {
+    filter: drop-shadow(-2px 2px rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(-2px 2px rgba(0, 0, 0, 0.2));
+}
+
+#menu-reg, #menu-nc {
+    border: 2px solid #1A1B0D;
+    width: 600px;
+    height: 300px;
+}
+
+#menu-reg h1, #menu-login h1, #menu-nc h1 {
+    font-size: 2.5em;
+}
+
+#menu-reg input[type="text"], #menu-reg input[type="password"],
+#menu-login input[type="text"], #menu-login input[type="password"],
+#menu-nc input[type="text"], #menu-nc input[type="number"]{
+    font-family: 'Krungthep', monospace;
+    background-color: transparent;
+    border: 2px solid #1A1B0D;
+    color: #1A1B0D;
+    width: 200px;
+}
+
+#menu-login {
+    border: 2px solid #1A1B0D;
+    width: 600px;
+    height: 250px;
+}
+
+#menu-inputs input[type="number"] {
+    width: 50px;
+}
+
+.menu-label {
+    width: 200px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.menu-div {
+    margin-bottom: 5px;
+}
+
+#menu-inputs input[type="number"] {
+    border: 2px solid #1A1B0D;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+#menu-radiodiv {
+    margin-top: 25px;
+}
+
+#menu-button {
+    margin-top: 30px;
+}
+
+.menu-radiolabel {
+    margin-right: 10px;
+}
+
+.menu-copy {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+#err, #browser-warn {
+    visibility: hidden;
+    color: #CC181E;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+#subt {
+    font-size: 0.9em;
+    position: absolute;
+    top: 85px;
+    right: 50px;
+}
+
+#subt_main {
+    font-size: 0.9em;
+    position: absolute;
+    top: 85px;
+    right: 150px;
+}
+
+#nologin-btns {
+	margin-top: 50px;
+}
+
+/* VIEW WINDOWS */
+
+#mode1-window, #mode2-window {
+    display: none;
+    width: 960px;
+    height: 640px;
+}
+
+#endgame-window {
+    display: none;
+    width: 450px;
+    height: 200px;
+    border: 2px solid #1A1B0D;
+    text-align: center;
+}
+
+#endgame-window-php {
+    display: none;
+    width: 550px;
+    height: 500px;
+    border: 2px solid #1A1B0D;
+    text-align: center;
+}
+
+#endgame-window, #endgame-window *, #endgame-window-php, #endgame-window-php * {
+    filter: drop-shadow(-2px 2px rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(-2px 2px rgba(0, 0, 0, 0.2));
+}
+
+#endgame-cover {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#endgame-button {
+    margin-top: 20px;
+}
+
+.score-sign {
+    text-align: left;
+    position: absolute;
+    top: 45px;
+    font-size: 26px;
+}
+
+.effect-sign {
+    text-align: right;
+    position: absolute;
+    top: 45px;
+    margin-top: -10px;
+}
+
+.effect-icon {
+    font-size: 36px;
+}
+
+.effect-text {
+    font-size: 26px;
+    margin-left: 2px;
+}
+
+.esc-btn {
+    font-size: 26px;
+    top: 580px;
+    position: absolute;
+}
+
+#cover {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+#courses {
+    height: 230px;
+    overflow-y: scroll;
+}
+
+.course-div {
+    margin: 0 20px 5px 20px;
+    text-align: left;
+    background-color: #1A1B0D;
+    color: #7DAB42;
+    padding: 5px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 95px;
+    border: 2px solid #1A1B0D;
+}
+
+.course-div:hover {
+    background-color: #242512;
+}
+
+.course-div:active {
+    background-color: #93BE5A;
+    color: #1A1B0D;
+}
+
+.course-div:disabled {
+    background-color: #93BE5A;
+    color: #1A1B0D;
+}
+
+.course-div h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+}
+
+#menu-logout {
+    margin-top: 35px;
+}
+
+#top10 {
+    height: 240px;
+    overflow-y: scroll;
+}
+
+#top10-h {
+    margin-top: 30px;
+}
+
+#top10 table {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* MODE1 VIEW (HTML+CSS) */
+
+#mode1-canv {
+    border: 2px solid #1A1B0D;
+    background-color: #7DAB42;
+    height: 490px;
+    position: absolute;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+#mode1-window div {
+    position: absolute;
+}
+
+#mode1-window > div {
+    filter: drop-shadow(-3px 3px rgba(0, 0, 0, 0.3));
+    -webkit-filter: drop-shadow(-3px 3px rgba(0, 0, 0, 0.2));
+}
+
+/* MODE2 VIEW (HTML5 CANVAS) */
+
+#mode2-canv {
+    border: 2px solid #1A1B0D;
+    background-color: #7DAB42;
+    position: absolute;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#mode2-window > div, #mode2-window > canvas {
+    filter: drop-shadow(-3px 3px rgba(0, 0, 0, 0.3));
+    -webkit-filter: drop-shadow(-3px 3px rgba(0, 0, 0, 0.2));
+}
